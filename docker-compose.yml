@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:15-alpine # Versión ligera
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: enyelberth
+      POSTGRES_PASSWORD: 30204334
+      POSTGRES_DB: kaizen
+    ports:
+      - "5433:5433"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
