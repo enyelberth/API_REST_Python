@@ -10,4 +10,8 @@ class CurrencyCreate(BaseModel):
 
 class CurrencyResponse(BaseModel):
     id: int
-    active: bool = True
+    name: str
+    code:str
+ #   description: str
+ #   uptated_at:str
+ #   created_at:str
